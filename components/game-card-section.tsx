@@ -4,7 +4,7 @@ import { useState, useRef } from "react"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Star, AlertTriangle, Brain, Gamepad2 } from "lucide-react"
+import { Play, Star, AlertTriangle, Brain, Gamepad2 } from "lucide-react"
 import GamePreview from "./game-preview"
 import { Badge } from "@/components/ui/badge"
 import { useMobile } from "@/hooks/use-mobile"
@@ -469,10 +469,10 @@ export default function GameCardSection() {
                   </div>
                   <div className="sm:hidden absolute inset-0 bg-black/70 flex flex-col justify-center items-center p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <Button
-                      className="w-full bg-primary hover:bg-primary/90 text-sm py-1"
+                      className="bg-primary hover:bg-primary/90 text-white w-12 h-12 rounded-full flex items-center justify-center transition-transform transform group-hover:scale-110 duration-300"
                       onClick={() => handlePlayNow(game)}
                     >
-                      Play Now
+                       <Play className="h-5 w-5" />
                     </Button>
                   </div>
                 </div>

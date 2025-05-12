@@ -272,9 +272,10 @@ export default function Navbar() {
           {/* Animated Search Input */}
           <div ref={searchRef} className="relative">
             <div
-              className={`flex items-center rounded-full border border-primary/30 bg-background/80 backdrop-blur-sm transition-all duration-700 overflow-hidden ${isSearchOpen ? "w-[350px]" : "w-[50px]"}`}
+              className={`flex items-center rounded-full border border-primary/30 bg-background/80 backdrop-blur-sm transition-all duration-700 overflow-hidden ${isSearchOpen ? "w-[250px] sm:w-[350px]" : "w-[40px]" } h-[40px]`} 
             >
-              <div className="flex items-center justify-center w-[50px] h-[38px]">
+              {/* Search Icon */}
+              <div className="flex items-center justify-center w-[45px] h-[45px] rounded-full">
                 <Search
                   className={`h-5 w-5 text-muted-foreground transition-transform duration-700 ${isSearchOpen ? "rotate-90" : ""}`}
                   onClick={toggleSearch}
@@ -315,7 +316,7 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.5 }}
-                className="absolute right-0 mt-2 w-[350px] bg-background/95 backdrop-blur-md border border-primary/20 rounded-lg shadow-lg overflow-hidden z-50"
+                className="absolute right-0 mt-2 w-[250px] sm:w-[350px] bg-background/95 backdrop-blur-md border border-primary/20 rounded-lg shadow-lg overflow-hidden z-50"
               >
                 {searchResults.length > 0 ? (
                   <div className="max-h-80 overflow-y-auto">
